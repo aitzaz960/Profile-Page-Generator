@@ -1,0 +1,260 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./favicon.ico">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Profile</title>
+    </head>
+    <body>
+
+        <div class="Information_filler" id="parent_div">
+
+            <div class="profile-pic-div">
+                <img src="./image.jpg" id="photo">
+                <input type="file" id="file">
+                <label for="file" id="uploadBtn">Choose Photo</label>
+            </div>
+
+
+            <div class="personal_info" id="personal_info_div">
+
+                <h2 style="margin-right: 70%;">Personal Information</h2><br><br>
+                <label for="name_textbox" id="my_name">Full Name:</label><br>
+                <input type="text" id="name_textbox" size="35" required>
+                <br><br>
+
+                <label for="about_textbox" id="about_id">About Me:</label><br>
+                <textarea id="about_textbox" rows="5" cols="50"></textarea><br><br>
+
+                <label for="DOB_textbox" id="my_DOB">Date of Birth:</label><br>
+                <input type="date" id="DOB_textbox" size="35" required><br>
+
+                <label for="visible_name" id="visible_1">Viewers can see this?</label>
+                <input type="radio" name="DOB_visibility" id="visible_1" value="Yes" checked>Yes
+                <input type="radio" name="DOB_visibility" id="visible_1" value="No">No <br><br>
+
+                <label for="email_textbox" id="my_email">Email: </label><br>
+                <input type="text" id="email_textbox" size="35" required><br>
+
+                <label for="visible_email" id="visible_2">Viewers can see this?</label>
+                <input type="radio" name="email_visibility" id="visible_2" value="Yes" checked>Yes
+                <input type="radio" name="email_visibility" id="visible_2" value="No">No <br><br>
+
+                <label for="phone_textbox" id="my_phone">Contact No:</label><br>
+                <input type="text" id="phone_textbox" size="35" required><br>
+
+                <label for="visible_phone" id="visible_3">Viewers can see this?</label>
+                <input type="radio" name="phone_visibility" id="visible_3" value="Yes" checked>Yes
+                <input type="radio" name="phone_visibility" id="visible_3" value="No">No <br><br>
+
+                <label for="GitHub_textbox" id="my_github">GitHub profile:</label><br>
+                <input type="text" id="GitHub_textbox" size="35" required><br>
+
+                <label for="visible_github" id="visible_4">Viewers can see this?</label>
+                <input type="radio" name="github_visibility" id="visible_4" value="Yes" checked>Yes
+                <input type="radio" name="github_visibility" id="visible_4" value="No">No <br><br>
+
+                <label for="Lnkdn_textbox" id="my_linkdin">Linkdin Profile:</label><br>
+                <input type="text" id="Lnkdn_textbox" size="35" required><br>
+
+                <label for="visible_linkdin" id="visible_5">Viewers can see this?</label>
+                <input type="radio" name="linkdin_visibility" id="visible_5" value="Yes" checked>Yes
+                <input type="radio" name="linkdin_visibility" id="visible_5" value="No">No <br><br>
+
+                <label for="address_textbox" id="my_address">Permanet Address:</label><br>
+                <textarea id="address_textbox" rows="7" cols="40" required></textarea><br>
+
+                <label for="visible_address" id="visible_6">Viewers can see this?</label>
+                <input type="radio" name="address_visibility" id="visible_6" value="Yes" checked>Yes
+                <input type="radio" name="address_visibility" id="visible_6" value="No">No <br><br>
+            </div>
+
+            <div class="container_2" id="div_for_3_sections">
+                <div class="educational-info" id="educational-info-div">
+                    <h2>Educational Information</h2><br><br>
+
+                    <div class="div_for_1_education" id="education_A">
+                        <label for="degree" id="degree_name">Degree: </label><br>
+                        <select id="degree_name_drop_down">
+                            <option value="" disabled selected>Select the Degree Level</option>
+                            <option value="Masters">Masters</option>
+                            <option value="Bachelors">Bachelors</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Matric">Matric</option>
+                        </select>
+                        <br><br>
+
+                        <label for="institute" id="institute_name">Institute</label><br>
+                        <input type="text" id="institute" size="35"><br><br>
+
+                        <label for="edu_from_date" id="edu_from_date">From:</label><br>
+                        <input type="date" id="edu_from_date"><br>
+
+                        <label for="edu_to_date" id="to">To:</label><br>
+                        <input type="date" id="edu_to_date"><br><br>
+
+                        <button id="add_education_A" onclick="add_educational_info('education_A')">Add another field</button><br>
+                        <button id="remove_education_A" onclick="remove_educational_info('education_A')">Remove this field</button><br>
+                    </div>
+                </div>
+
+                <div class="projects-info" id="projects-info-div">
+                    <h2>Personal Projects</h2><br><br>
+                        
+                    <div class="div_for_1_project" id="Project_A">
+                        <label for="prj_name" id="project">Project Title: </label><br>
+                        <input type="text" id="prj_name" size="35"><br><br>
+                            
+                        <label for="prj_link" id="pr_link">Link:</label><br>
+                        <input type="text" id="prj_link" size="35"><br><br>
+
+                        <label for="prj_from" id="from_date">From:</label><br>
+                        <input type="date" id="prj_from"><br>
+
+                        <label for="prj_to" id="to_date">To:</label><br>
+                        <input type="date" id="prj_to"><br><br>
+
+                        <center><button class="add_projects" onclick="add_project_info('Project_A')">Add another field</button><br></center>
+                        <center><button class="remove_projects" onclick="remove_project_info('Project_A')">Remove this field</button><br></center>
+                    </div>
+                </div>
+
+                <div class="experience-info" id="experience-info-div">
+                    <h2>Past Experience</h2><br><br>
+                        
+                    <div id="experience_A" class="div_for_1_experience">
+                        <label for="designation" id="designation_label">Designation:</label><br>
+                        <input type="text" id="designation_textbox" required><br><br>
+
+                        <label for="company" id="company_label">Company:</label><br>
+                        <input type="text" id="company_textbox" required><br><br>
+
+                        <label for="from" id="from_date">From:</label><br>
+                        <input type="date" id="exp_from"><br>
+
+                        <label for="to" id="to_date">To:</label><br>
+                        <input type="date" id="exp_to"><br><br>
+
+                        <center><button class="add_experience" onclick="add_experience_info('experience_A')">Add another field</button><br></center>
+                        <center><button class="remove_experience" onclick="remove_experience_info('experience_A')">Remove this field</button><br></center>
+                    </div>
+                </div>
+            </div>
+
+            <button class="generator_btn" onclick="generate_profile()">Preview Profile</button>
+        </div>
+
+
+
+
+        <div class="profile_div" id="profile-div-id">
+
+            <div class="vertical_divider" id="vertical_divider">
+
+                <div class="left_portion" id="left_portion">
+                    <img src="./image.jpg" alt="The image could not be loaded" class="profile_image" id="profile_image">
+                    <h2 id="Person_name"> Aitzaz Ahmad </h2>
+
+                    <table>                    
+                        <tr id="email_id">
+                            <td>
+                                <img class="email_icon_div" src="./email_icon.png" alt="email icon not uploaded">
+                            </td>
+                            <td>
+                                <p class="profile_email" id="profile_email">i180589@nu.edu.pk</p>
+                            </td>
+                        </tr>
+                        <tr id="contact_id">
+                            <td>
+                                <img class="contact_icon_div" src="./contact_icon.jpg" alt="contact icon not uploaded">
+                            </td>
+                            <td>
+                                <p class="profile_contact" id="profile_contact">0310-5036583</p>
+                            </td>
+                        </tr>
+                        <tr id="DOB_id">
+                            <td>
+                                <img class="DOB_icon_div" src="./DOB_icon.jpg" alt="DOB icon not uploaded">
+                            </td>
+                            <td>
+                                <p class="profile_DOB" id="profile_DOB">14 April 2000</p>
+                            </td>
+                        </tr>
+                        <tr id="github_id">
+                            <td>
+                                <img class="github_icon_div" src="./github_icon.png" alt="GitHub icon not uploaded">
+                            </td>
+                            <td>
+                                <p><a class="profile_github" id="profile_github">https://www.github.com/aitzaz960</a></p>
+                            </td>
+                        </tr>
+                        <tr id="Linkdin_id">
+                            <td>
+                                <img class="Linkdin_icon_div" src="./linkdin.png" alt="Linkdin icon nit uploaded">
+                            </td>
+                            <td>
+                                <p><a class="profile_linkdin" id="profile_linkdin">https://linkdin.com/aitzaz_ahmad</a></p>
+                            </td>
+                        </tr>
+                        <tr id="address_id">
+                            <td>
+                                <img class="address_icon_div" src="./address_icon.png" alt="Address icon not uploaded">
+                            </td>
+                            <td>
+                                <p class="profile_address" id="profile_address">Islamabad, Pakistan</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="right_portion" id="right_portion">
+                    <h1 class="main_heading"> Profile Preview </h1>
+
+                    <div id="profile_about">
+                        <h3 class="about_heading">About me:</h3>
+                        <p class="about_content" id="about_content">
+                            Spending time at national parks can be an exciting adventure, but this wasn't the type of excitement she was 
+                            hoping to experience. As she contemplated the situation she found herself in, she knew she'd gotten herself in 
+                            a little more than she bargained for. It wasn't often that she found herself in a tree staring down at a pack 
+                            of wolves that were looking to make her their next meal.
+                        </p>
+                        <br><br>
+                    </div>
+
+                    <div class="profile_project">
+                        <h3 class="projects_heading">My Projects</h3>
+                        <h4 id="project_title_div">Bank Management System</h4>
+                        <h5> <a id="prj_link_div" href="www.google.com">Link of this project</a> </h5>
+                        <h5 id="project_date_div">December 2020 - December 2020</h5>
+                        <p id="project_content">
+                            Spending time at national parks can be an exciting adventure, but this wasn't the type of excitement she was 
+                            hoping to experience. As she contemplated the situation she found herself in, she knew she'd gotten herself in 
+                            a little more than she bargained for. It wasn't often that she found herself in a tree staring down at a pack 
+                            of wolves that were looking to make her their next meal.
+                        </p>
+                    </div>
+
+                    <div class="profile_experience">
+                        <h3 class="experience_heading">Past Experience</h3>
+                        <h4 id="experience_title_div">SQA Intern</h4>
+                        <h5 id="company_name_div">Afiniti</h5>
+                        <h5 id="experience_date_div">4 August 2020 - 7 September 2020</h5>
+                    </div>
+
+                    <div class="profile_education">
+                        <h3 class="education_heading">Education: </h3>
+                        <h4 id="degree_name_div">Bachelors</h4>
+                        <h5 id="uni_name_div">FAST NUCES Islamabad</h5>
+                        <h5 id="edu_dates_div"> 31 August 2018 - 1 June 2022 </h5>
+                        <br><br>
+                        
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
